@@ -25,13 +25,14 @@ class Game:
         input_loop = ""
         while input_loop != True:
             print(f"The Card is : {self.selected}")
-            pick_card = input("Higher or Lower?[h, l]")
+            pick_card = input("Higher or Lower? [h, l]  ")
             if pick_card.lower() == "h" or pick_card.lower() == "l":
                 pick_card = pick_card
                 input_loop = True
             else:
                 print()
                 print("Invalid input, please try again (h or l)")
+                print()
                 input_loop = False
 
         card = Card()
@@ -48,15 +49,15 @@ class Game:
     # Updates the score based on user's h or l answer.
     def update_score(self, pick_card):
         if pick_card.lower() == "h" and self.selected > self.previous:
-            print(f"Next Card was: {self.selected}")
+            print(f"Next Card is: {self.selected}")
             print("You selected higher and the card was higher")
             self.score += 100
         elif pick_card.lower() == "l" and self.selected < self.previous:
-            print(f"Next Card was: {self.selected}")
+            print(f"Next Card is: {self.selected}")
             print("You selected lower and the card was lower")
             self.score += 100
         else:
-            print(f"Next Card was: {self.selected}")
+            print(f"Next Card is: {self.selected}")
             self.score -= 75
 
     # Check score to see if it is 0 or less and print game over, print out the score, 
@@ -74,40 +75,26 @@ class Game:
         
         while play_loop != True:
             play_again = input("Play again ? [y/n]: ")
+            print()
             if play_again.lower() == "y":
                 self.is_playing = True
                 return
             elif play_again.lower() == "n":
                 self.is_playing = False
-                print('Thanks for playing. Goodbye.')
+                print('Thanks for playing, Goodbye.')
+                print()
                 return
         print()
 
+# pulls a new random number
 class Card:
-    """
-    A rectangular paper with a different number on it's face.
-
-    The responsibility of Card is to pull the next card out of the deck
-
-    Attributes:
-        selected (int): The number on the current card displayed.
-    """
+    
+    # pulls a new random number
     def __init__(self):
-        """
-        Constructs a new Card.
-
-        Args:
-            self: (Card): An instance of Card.
-        """
         self.selected = 0
 
+    # Select a random number between 1 and 13 and return the card number.
     def select_card(self):
-        """
-        Select a random card between 1 and 13 and return the card number.
-
-        Args:
-            self: (Card): An instance of Card.
-        """
         self.selected = random.randint(1, 13)
         return self.selected
 
