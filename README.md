@@ -18,7 +18,7 @@ root                      (project root folder)
 ---
 * Python 3.8.0
 
-## Authors
 # Team 8
+## Authors
 ---
 * Andrew Funk (funk.andrew10@gmail.com)
