@@ -8,7 +8,7 @@ The project files and folders are organized as follows:
 root                      (project root folder)
 -- gitignore              (files for program to ignore)
 -- README.md              (general info)
---- test_game             (code for testing)
+-- test_game              (code for testing)
 -- game.py                (director class)
 ```
 
