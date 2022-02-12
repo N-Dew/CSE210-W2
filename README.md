@@ -6,11 +6,10 @@ Hilo is a game in which the player guesses if the next card drawn by the dealer 
 The project files and folders are organized as follows:
 ```
 root                      (project root folder)
+-- gitignore              (files for program to ignore)
 -- README.md              (general info)
 --- test_game             (code for testing)
 -- game.py                (director class)
--- gitignore              (files for program to ignore)
--- conftest.py            (help the pytests run)
 ```
 
 ## Required Technologies
