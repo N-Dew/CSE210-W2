@@ -2,9 +2,8 @@ import pytest
 from game import Game
 import io
 
+# Tests whether score adds points based on user entering 'h'
 def test_high():
-    
-    #tests whether score adds points based on user entering 'h'
     game = Game()
     game.previous = 1
     game.selected = 2
@@ -15,9 +14,8 @@ def test_high():
     game.update_score("h")
     assert game.score == 325
 
+# Tests whether score subtracts points based on user entering 'l'
 def test_low():
-
-    #tests whether score subtracts points based on user entering 'l'
     game = Game()
     game.previous = 2
     game.selected = 1
