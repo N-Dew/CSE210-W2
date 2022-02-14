@@ -1,6 +1,7 @@
 import random
 
 #main class that plays the game
+"""Module that starts the game"""
 class Game:
 
     # At the start of each game it will reset the variables so the game can be re-played.
