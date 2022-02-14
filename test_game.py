@@ -4,6 +4,9 @@ import io
 
 # Tests whether score adds points based on user entering 'h'
 def test_high():
+    """
+    tests whether score adds or deducts points based on user entering 'h'
+    """
     game = Game()
     game.previous = 1
     game.selected = 2
@@ -16,6 +19,9 @@ def test_high():
 
 # Tests whether score subtracts points based on user entering 'l'
 def test_low():
+    """
+    tests whether score adds or deducts points based on user entering 'l'
+    """
     game = Game()
     game.previous = 2
     game.selected = 1
@@ -29,7 +35,8 @@ def test_low():
 
 # Testing to make sure end/continue controls work "y" (yes) and "n" (no)
 def test_do_updates(invalid):
-
+    """ tests the do_updates function
+    """
     # test 'y' to continue game
     game = Game()
     invalid.setattr("sys.stdin", io.StringIO("1234\ny"))
